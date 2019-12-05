@@ -216,6 +216,9 @@
             var url_string = window.location.href;
             var url = new URL(url_string);
             var supplier_id = url.searchParams.get("supplier_id");
+            if (supplier_id == null) {
+                supplier_id = "";
+            }
 
             //alert(txtSearch + " " + minPrice + " " + maxPrice);
             var url = "Index.aspx?txtSearch=" + txtSearch + "&minPrice=" + minPrice + "&maxPrice=" + maxPrice + "&supplier_id=" + supplier_id;
